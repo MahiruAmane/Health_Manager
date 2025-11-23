@@ -83,6 +83,7 @@ To **Execute** This **Program**
 
 ## 👥 Team Details
 
+- 🌸 **Member** - MahiruAmane.
 - 🧭 **Note** — This Project Was Completed **Individually**. 
 
 ---
@@ -90,5 +91,20 @@ To **Execute** This **Program**
 ## 📚 References
 - 🚫 No External References Were Used In The Development Of This Project.  
 - ✍️ All Code And Documentation Were Created Independently.
+
+---
+
+## 🧮 Evaluation Weightage
+
+| **Criteria**                     | **Marks** | **Description**                                         |
+|----------------------------------|-----------|---------------------------------------------------------|
+| Problem Definition & Design      | 15        | Clarity Of Objectives, Logic & Design.                  |
+| Implementation & Coding Style    | 20        | Modularity, Readability, Comments & Correctness.        |
+| Documentation Quality            | 15        | Completeness Of The Report Inside The `/docs` Folder.   |
+| GitHub Usage & Collaboration     | 20        | Structure, Commit Activity & Correctness Of Repository. |
+| Originality And Creativity       | 10        | Novelty Of Idea & Low Similarity Scores.                |
+| Execution & Output Validity      | 20        | Correctness Of Output & Runtime Behavior.               |
+
+This **Project (Health Management System)** Meets All The Required Criteria Outlined In The Above Mentioned Rubric.
 
 ---
