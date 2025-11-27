@@ -2,7 +2,8 @@
 #define BASIC_DATA_H
 
 // Represents a User Record Containing Basic Personal Details
-typedef struct {
+typedef struct 
+{
     char user_name[32];   // Name (Max 31 Characters + Null Terminator)
     char user_gender[16]; // Gender (Male/Female)
     int user_age;         // Age (Years)
