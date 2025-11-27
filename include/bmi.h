@@ -27,6 +27,15 @@ typedef struct {
     char goal_label[32];      // Target Weight Description
 } Exercise;
 
+// Represents Exercise Information For Recommendations
+typedef struct 
+{
+    const char* name;            // Name Of The Exercise
+    const char* unit;            // Unit Of Measurement (Reps/Seconds)
+    int base_amount_per_day;     // Base Amount To Perform Per Day
+    int sets;                    // Number Of Sets
+} ExerciseInfo;
+
 // Calculates BMI Based On User Data & Prints Exercise Recommendations
 void calculateBmi(void);
 
