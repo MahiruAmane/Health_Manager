@@ -4,7 +4,7 @@
 #include "bmi.h"
 
 // Function To Print Exercise Plan For A Given Muscle Group
-void print_plan_for_group(const char* group_title, ExerciseInfo exercises[], int num_exercises, int days) 
+void printData(const char* group_title, ExerciseInfo exercises[], int num_exercises, int days) 
 {
     printf("\nExercises For The %s Are As Follows : \n\n", group_title);
 
@@ -292,11 +292,11 @@ void calculateBmi()
     printf("-------------------------------------------------------------- PERSONALIZED EXERCISE RECOMMENDATION -----------------------------------------------");
 
     // Print Exercise Plans For Each Muscle Group
-    print_plan_for_group("Legs", leg_exercises, sizeof(leg_exercises)/sizeof(leg_exercises[0]), days);
-    print_plan_for_group("Chest", chest_exercises, sizeof(chest_exercises)/sizeof(chest_exercises[0]), days);
-    print_plan_for_group("Arms", arm_exercises, sizeof(arm_exercises)/sizeof(arm_exercises[0]), days);
-    print_plan_for_group("Full Body", full_body_exercises, sizeof(full_body_exercises)/sizeof(full_body_exercises[0]), days);
-    print_plan_for_group("Core", core_exercises, sizeof(core_exercises)/sizeof(core_exercises[0]), days);
+    printData("Legs", leg_exercises, sizeof(leg_exercises)/sizeof(leg_exercises[0]), days);
+    printData("Chest", chest_exercises, sizeof(chest_exercises)/sizeof(chest_exercises[0]), days);
+    printData("Arms", arm_exercises, sizeof(arm_exercises)/sizeof(arm_exercises[0]), days);
+    printData("Full Body", full_body_exercises, sizeof(full_body_exercises)/sizeof(full_body_exercises[0]), days);
+    printData("Core", core_exercises, sizeof(core_exercises)/sizeof(core_exercises[0]), days);
     
     printf("---------------------------------------------------------------------------------------------------------------------------------------------------\n");
     
