@@ -3,6 +3,21 @@
 // Inclusion Of Header Files
 #include "bmi.h"
 
+// Function To Print Exercise Plan For A Given Muscle Group
+void print_plan_for_group(const char* group_title, ExerciseInfo exercises[], int num_exercises, int days) 
+{
+    printf("\nExercises For The %s Are As Follows : \n\n", group_title);
+
+    // Loop Through Each Exercise And Print The Plan
+    for (int i = 0; i < num_exercises; i++) 
+    {
+        int total_amount = exercises[i].base_amount_per_day * days;
+
+        printf("Please Complete %d %s Of %s (%d Sets) Every Day For The Next %d Days\n", 
+        total_amount, exercises[i].unit, exercises[i].name, exercises[i].sets, days);
+    }
+}
+
 // Function To Calculate BMI & Give Personalized Exercise Recommendations
 void calculateBmi()
 {
@@ -84,7 +99,7 @@ void calculateBmi()
         printf("\nPlease Enter Your Goal Weight (In Kg) : ");
         scanf("%f", &e.goal_weight);
 
-    } while (e.goal_weight < 10 || e.goal_weight > 250 && e.goal_weight == h.user_weight); // Target Weight Cannot Be Same As Current Weight
+    } while ((e.goal_weight < 10 || e.goal_weight > 250) || e.goal_weight == h.user_weight); // Target Weight Cannot Be Same As Current Weight
 
     // Ask For User Activity Level
     printf("\nWhat Is Your Baseline Activity Level ?\n");
@@ -240,123 +255,49 @@ void calculateBmi()
         printf("Your Personalized One Week Exercise Plan Lasting %d Days Is Designed To Help You Make Effective Progress\n", days);
 
     }
+    
+    ExerciseInfo leg_exercises[] = 
+    {
+        { "Squats", "Reps", 10, 2 },
+        { "Lunges Per Leg", "Reps", 4, 3 },
+        { "Dead Lifts", "Reps", 2, 2 }
+    };
+
+    ExerciseInfo chest_exercises[] = 
+    {
+        { "Push Ups", "Reps", 5, 2 },
+        { "Chest Fly's", "Reps", 4, 3 }
+    };
+
+    ExerciseInfo arm_exercises[] = 
+    {
+        { "Bicep Curls", "Reps", 5, 3 },
+        { "Tricep Dips", "Reps", 8, 2 }
+    };
+
+    ExerciseInfo full_body_exercises[] = 
+    {
+        { "Burpees", "Reps", 3, 3 },
+        { "Jumping Jacks", "Reps", 12, 2 }
+    };
+
+    ExerciseInfo core_exercises[] = 
+    {
+        { "Planks", "Seconds", 15, 3 },
+        { "Mountain Climbers", "Reps", 7, 2 },
+        { "Leg Raises", "Reps", 6, 3 }
+    };
 
     printf("\n");
     printf("-------------------------------------------------------------- PERSONALIZED EXERCISE RECOMMENDATION -----------------------------------------------");
-    printf("\nExercises For The Legs Are As Follows : \n");
-    printf("\n");
-    int squats = 0;
 
-    for (int i = 1; i <= days; i++)
-    {
-        squats = squats + 10;
-    }
-    printf("Please Complete %d Squats (2 Sets) Every Day For The Next %d Days\n", squats, days);
-
-    int lunges = 0;
-
-    for (int i = 1; i <= days; i++)
-    {
-        lunges = lunges + 4;
-    }
-    printf("Please Complete %d Lunges Per Leg (3 Sets) Every Day For The Next %d Days\n", lunges, days);
-
-    int lift = 0;
-
-    for (int i = 1; i <= days; i++)
-    {
-        lift = lift + 2;
-    }
-    printf("Please Complete %d Dead Lifts (2 Sets) Every Day For The Next %d Days\n", lift, days);
-
-    printf("\n");
-    printf("Exercises For The Chest Are As Follows : \n");
-    printf("\n");
-
-    int ups = 0;
-
-    for (int i = 1; i <= days; i++)
-    {
-        ups = ups + 5;
-    }
-    printf("Please Complete %d Push Ups (2 Sets) Every Day For The Next %d Days\n", ups, days);
-
-    int fly = 0;
-
-    for (int i = 1; i <= days; i++)
-    {
-        fly = fly + 4;
-    }
-    printf("Please Complete %d Chest Fly's (3 Sets) Every Day For The Next %d Days\n", fly, days);
-
-    printf("\n");
-    printf("Exercises For The Arms Are As Follows : \n");
-    printf("\n");
-
-    int curls = 0;
-
-    for (int i = 1; i <= days; i++)
-    {
-        curls = curls + 5;
-    }
-    printf("Please Complete %d Bicep Curls (3 Sets) Every Day For The Next %d Days\n", curls, days);
-
-    int dips = 0;
-
-    for (int i = 1; i <= days; i++)
-    {
-        dips = dips + 8;
-    }
-    printf("Please Complete %d Tricep Dips (2 Sets) Every Day For The Next %d Days\n", dips, days);
-
-    printf("\n");
-    printf("Exercises For The Full Body Are As Follows : \n");
-    printf("\n");
-
-    int burp = 0;
-
-    for (int i = 1; i <= days; i++)
-    {
-        burp = burp + 3;
-    }
-    printf("Please Complete %d Burpees (3 Sets) Every Day For The Next %d Days\n", burp, days);
-
-    int jacks = 0;
-
-    for (int i = 1; i <= days; i++)
-    {
-        jacks = jacks + 12;
-    }
-    printf("Please Complete %d Jumping Jacks (2 Sets) Every Day For The Next %d Days\n", jacks, days);
-
-    printf("\n");
-    printf("Exercises For The Core Are As Follows : \n");
-    printf("\n");
-
-    int plank = 0;
-
-    for (int i = 1; i <= days; i++)
-    {
-        plank = plank + 15;
-    }
-    printf("Please Complete %d Seconds Of Planks (3 Sets) Every Day For The Next %d Days\n", plank, days);
-
-    int climb = 0;
-
-    for (int i = 1; i <= days; i++)
-    {
-        climb = climb + 7;
-    }
-    printf("Please Complete %d Mountain Climbers (2 Sets) Every Day For The Next %d Days\n", climb, days);
-
-    int leg = 0;
-
-    for (int i = 1; i <= days; i++)
-    {
-        leg = leg + 6;
-    }
-    printf("Please Complete %d Leg Raises (3 Sets) Every Day For The Next %d Days\n", leg, days);
-
+    // Print Exercise Plans For Each Muscle Group
+    print_plan_for_group("Legs", leg_exercises, sizeof(leg_exercises)/sizeof(leg_exercises[0]), days);
+    print_plan_for_group("Chest", chest_exercises, sizeof(chest_exercises)/sizeof(chest_exercises[0]), days);
+    print_plan_for_group("Arms", arm_exercises, sizeof(arm_exercises)/sizeof(arm_exercises[0]), days);
+    print_plan_for_group("Full Body", full_body_exercises, sizeof(full_body_exercises)/sizeof(full_body_exercises[0]), days);
+    print_plan_for_group("Core", core_exercises, sizeof(core_exercises)/sizeof(core_exercises[0]), days);
+    
     printf("---------------------------------------------------------------------------------------------------------------------------------------------------\n");
     
 }
