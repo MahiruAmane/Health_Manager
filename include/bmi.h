@@ -1,3 +1,9 @@
+/*
+    File Name : bmi.h
+    Description : This Header File Contains The Definitions And Prototypes Required For Calculating Body Mass Index (BMI)
+                  And Providing Exercise Recommendations Based On User Health Data.
+*/
+
 #ifndef BMI_H
 #define BMI_H
 
