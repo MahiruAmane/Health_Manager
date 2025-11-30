@@ -1,5 +1,12 @@
+/*
+    File Name : basic_data.c
+    Description : This File Contains All The Functions Related To Basic Data Operations
+                  Such As Adding, Displaying, And Deleting Records.
+*/
+
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 // Inclusion Of Header Files
 #include "basic_data.h"
 
@@ -8,7 +15,7 @@ void addRecord()
 {
     Record r;
 
-    printf("\n------------------------------------------------------------- PLEASE ADD A NEW RECORD -------------------------------------------------------------\n");
+    printf("\n--------------------------- ADD A NEW RECORD ---------------------------\n");
     
     // Removes Newline For Usage Of (fgets)
     getchar();
@@ -56,7 +63,7 @@ void addRecord()
 
     fclose(file);
     
-    printf("---------------------------------------------------------------------------------------------------------------------------------------------------\n");
+    printf("------------------------------------------------------------------------\n");
     printf("The Records Have Been Saved Sucessfully\n");
 }
 
@@ -64,7 +71,7 @@ void addRecord()
 void displayRecord()
 {
 
-    printf("\n-------------------------------------------------------------- DISPLAY RECORDS MENU ---------------------------------------------------------------\n");
+    printf("\n---------------------------- DISPLAY RECORDS ---------------------------\n");
 
     char line[100];
     char display_name[32];
@@ -89,13 +96,12 @@ void displayRecord()
         }
 
         sscanf(line, "%[^,],%[^,],%d,%d", display_name, display_gender, &display_age, &display_id);
-        printf("---------------------------------------------------------------------------------------------------------------------------------------------------\n");
+        printf("------------------------------------------------------------------------\n");
         printf("The Name You Entered Was : %s\n", display_name);
         printf("The Gender You Entered Was : %s\n", display_gender);
         printf("The Age You Entered Was : %d\n", display_age);
         printf("The ID You Entered Was : %d\n", display_id);
-        printf("---------------------------------------------------------------------------------------------------------------------------------------------------\n");
-
+        printf("------------------------------------------------------------------------\n");
         empty = empty + 1;
     }
 
@@ -116,7 +122,7 @@ void displayRecord()
 void deleteRecord()
 {
 
-    printf("\n--------------------------------------------------------------- DELETE RECORDS MENU ---------------------------------------------------------------\n");
+    printf("\n---------------------------- DELETE RECORDS ----------------------------\n");
 
     int delete_choice;
 
