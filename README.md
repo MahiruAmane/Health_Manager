@@ -35,6 +35,25 @@ To **Execute** This **Program**
 ./health_system
 ```
 
+To **Run** The Code **Automatically**
+
+---
+
+**Windows** (Command Prompt)
+```bash
+health_system < sample_input.txt
+```
+
+**Windows** (Powershell)
+```bash
+Get-Content sample_input.txt | .\health_system.exe
+```
+
+**Linux** & **Mac** Operating System
+```bash
+./health.system < sample_input.txt
+```
+
 ---
 
 ## 📂 Directory Structure
