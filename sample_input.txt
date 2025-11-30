@@ -35,6 +35,20 @@ Yes
 3
 2
 Yes
+1
+Naofumi Iwantani
+Male
+27
+75
+Yes
+1
+Rias Gremory
+Female
+19
+725
+Yes
+2
+Yes
 4
 48
 1.75
@@ -48,4 +62,11 @@ Yes
 80
 1
 2
+Yes
+4
+80
+1.75
+75
+3
+3
 No
