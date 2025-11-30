@@ -1,3 +1,8 @@
+/*
+    File Name : bmi.c
+    Description : This File Contains The Implementation Of Functions To Calculate BMI & Provide Exercise Recommendations.
+*/
+
 #include <stdio.h>
 #include <string.h>
 // Inclusion Of Header Files
@@ -18,6 +23,12 @@ void printData(const char* group_title, ExerciseInfo exercises[], int num_exerci
     }
 }
 
+static void clearInputBuffer() 
+{
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
+}
+
 // Function To Calculate BMI & Give Personalized Exercise Recommendations
 void calculateBmi()
 {
@@ -30,22 +41,30 @@ void calculateBmi()
     float max_weight;
 
     // Ask For User Weight (In Kg)
-    do
+    while (1)
     {
         printf("Please Enter Your Current Weight (In Kg) : ");
-        scanf("%f", &h.user_weight);
-
-    } while (h.user_weight < 10 || h.user_weight > 250);
+        if (scanf("%f", &h.user_weight) == 1 && h.user_weight >= 10 && h.user_weight <= 250) 
+        {
+            break;
+        }
+        clearInputBuffer();
+        printf("Weight Must Be Between 10 Kg & 250 Kg\n");
+    }
     
     // Ask For User Height (In M)
-    do
+    while (1)
     {
-        printf("Please Enter Your Current Height (In M) : ");
-        scanf("%f", &h.user_height);
+        printf("Please Enter Your Height (In Meters) : ");
+        if (scanf("%f", &h.user_height) == 1 && h.user_height >= 0.5 && h.user_height <= 2.5) 
+        {
+            break;
+        }
+        clearInputBuffer();
+        printf("Height Must Be Between 0.5 M & 2.5 M\n");
+    }
 
-    } while (h.user_height < 0.75 || h.user_height > 2.50);
-
-    printf("\n--------------------------------------------------------- Body Mass Index Calculator --------------------------------------------------------------");
+    printf("\n-------------------------- BMI CALCULATOR ------------------------------");
     // Calculation Of BMI Using Inline Function (Safer Than Macros)
     bmi = BMI(h.user_weight, h.user_height);
     printf("\nYou Calculated Body Mass Index (BMI) Is : %.2f\n", bmi);
@@ -90,16 +109,21 @@ void calculateBmi()
     }
 
     printf("\nThe Healthy Weight Range According To Your Height Is Between %.2f Kg & %.2f Kg\n", min_weight, max_weight);
-    printf("---------------------------------------------------------------------------------------------------------------------------------------------------\n");
+    printf("------------------------------------------------------------------------\n");
+
     Exercise e;
 
     // Ask For User Target Weight (In Kg)
-    do
+    while (1)
     {
-        printf("\nPlease Enter Your Goal Weight (In Kg) : ");
-        scanf("%f", &e.goal_weight);
-
-    } while ((e.goal_weight < 10 || e.goal_weight > 250) || e.goal_weight == h.user_weight); // Target Weight Cannot Be Same As Current Weight
+        printf("\nPlease Enter Your Target Weight (In Kg) : ");
+        if (scanf("%f", &e.goal_weight) == 1 && e.goal_weight >= 10 && e.goal_weight <= 250 && e.goal_weight != h.user_weight) 
+        {
+            break;
+        }
+        clearInputBuffer();
+        printf("Weight Must Be Between 10 Kg & 250 Kg and Not Equal To Current Weight\n");
+    }
 
     // Ask For User Activity Level
     printf("\nWhat Is Your Baseline Activity Level ?\n");
@@ -289,7 +313,7 @@ void calculateBmi()
     };
 
     printf("\n");
-    printf("-------------------------------------------------------------- PERSONALIZED EXERCISE RECOMMENDATION -----------------------------------------------");
+    printf("----------------- PERSONALIZED EXERCISE RECOMMENDATION -----------------\n");
 
     // Print Exercise Plans For Each Muscle Group
     printData("Legs", leg_exercises, sizeof(leg_exercises)/sizeof(leg_exercises[0]), days);
@@ -298,6 +322,6 @@ void calculateBmi()
     printData("Full Body", full_body_exercises, sizeof(full_body_exercises)/sizeof(full_body_exercises[0]), days);
     printData("Core", core_exercises, sizeof(core_exercises)/sizeof(core_exercises[0]), days);
     
-    printf("---------------------------------------------------------------------------------------------------------------------------------------------------\n");
+    printf("------------------------------------------------------------------------\n");
     
 }
