@@ -1,3 +1,8 @@
+/*
+    File Name : main.c
+    Description : Main Program File Handling User Interaction & Menu Navigation.
+*/
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -18,15 +23,16 @@ void clearScreen()
 // Displays The Main Menu Options For The Health Management System
 void printMenu()
 {
-    printf("\n----------------------------------------------------------- HEALTH MANAGEMENT SYSTEM -------------------------------------------------------------\n\n");
-    printf("------------------------------------------------------------ RECORD MANAGEMENT CHOICES ------------------------------------------------------------\n");
-    printf("\nPlease Select Option (1) To Add a New User Record\n");
-    printf("Please Select Option (2) To Display All The Available Records\n");
-    printf("Please Select Option (3) To Delete Some Available Records\n\n");
-    printf("--------------------------------------------------------- EXERCISE RECOMMENDATION CHOICE ----------------------------------------------------------\n");
-    printf("\nPlease Select Option (4) To Calculate Body Mass Index (BMI) & Get Exercise Recommendations\n\n");
-    printf("----------------------------------------------------------- PROGRAM TERMINATION CHOICE ------------------------------------------------------------\n");
-    printf("\nPlease Select Option (5) To Start Termination Of This Program\n\n");
+    printf("\n================== HEALTH MANAGEMENT SYSTEM ==================\n");
+    printf("---------------------- RECORD MANAGEMENT ---------------------\n");
+    printf("1. Add New User Record\n");
+    printf("2. Display All Records\n");
+    printf("3. Delete Records\n");
+    printf("\n------------------ EXERCISE RECOMMENDATION -------------------\n");
+    printf("4. Calculate BMI & Get Recommendations\n");
+    printf("\n---------------------------- SYSTEM --------------------------\n");
+    printf("5. Exit Program\n");
+    printf("==============================================================\n");
 }
 
 /*
