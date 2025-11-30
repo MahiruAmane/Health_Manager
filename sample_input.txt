@@ -1,86 +1,51 @@
-Health Management System
-
-Sample Input For Basic Health Records
-
-------------------------- Test Case 1 (Female) -------------------------
-Name — Shiina Mahiru
-Gender — Female
-Age — 17
-ID — 25
--------------------------- End Of Test Case 1 --------------------------
-
-
--------------------------- Test Case 2 (Male) --------------------------
-Name — Fujimiya Amane
-Gender — Male
-Age — 17
-ID — 50
--------------------------- End Of Test Case 2 --------------------------
-
-
-Sample Input for BMI Calculation & Standard Category Classification
-
------------------------ Test Case 1 (Underweight) ----------------------
-Weight (In Kg) — 48
-Height (In M) — 1.75
--------------------------- End Of Test Case 1 --------------------------
-
-
-------------------------- Test Case 2 (Normal) -------------------------
-Weight (In Kg) — 57
-Height (In M) — 1.75
--------------------------- End Of Test Case 2 --------------------------
-
-
------------------------ Test Case 3 (Overweight) -----------------------
-Weight (In Kg) — 78
-Height (In M) — 1.75
--------------------------- End Of Test Case 3 --------------------------
-
-
---------------------- Test Case 4 (Obese Class I ) ---------------------
-Weight (In Kg) — 95
-Height (In M) — 1.75
--------------------------- End Of Test Case 4 --------------------------
-
-
---------------------- Test Case 5 (Obese Class II ) --------------------
-Weight (In Kg) — 120
-Height (In M) — 1.75
--------------------------- End Of Test Case 5 --------------------------
-
-
--------------------- Test Case 6 (Obese Class III ) --------------------
-Weight (In Kg) — 130
-Height (In M) — 1.75
--------------------------- End Of Test Case 6 --------------------------
-
-Sample Input for Exercise Recommendation System
-
------------------------ Test Case 1 (Gain Weight) ----------------------
-Weight (In Kg) — 48
-Height (In M) — 1.75
-Goal Weight (In Kg) — 60
-Baseline Activity Level — 2 (Lightly Active)
-(Auto Recommends Gain Weight)
--------------------------- End Of Test Case 1 --------------------------
-
-
------------------------ Test Case 2 (Lose Weight) ----------------------
-Weight (In Kg) — 100
-Height (In M) — 1.75
-Goal Weight (In Kg) — 75
-Baseline Activity Level — 2 (Lightly Active)
-(Auto Recommends Lose Weight)
--------------------------- End Of Test Case 2 --------------------------
-
-
---------------------- Test Case 3 (Maintain Weight) --------------------
-Weight (In Kg) — 80
-Height (In M) — 1.75
-Goal Weight (In Kg) — 75
-Baseline Activity Level — 2 (Lightly Active)
-(Auto Recommends Maintain Weight)
--------------------------- End Of Test Case 3 --------------------------
-
-End Of Sample Input Cases
+1
+Stella Hoshino
+Female
+19
+100
+Yes
+1
+Shiina Mahiru
+Female
+17
+200
+Yes
+1
+Fujimiya Amane
+Male
+18
+300
+Yes
+1
+Haruto Amakawa
+Male
+22
+500
+Yes
+2
+Yes
+3
+1
+100
+Yes
+3
+1
+500
+Yes
+3
+2
+Yes
+4
+48
+1.75
+60
+2
+1
+Yes
+4
+107
+1.72
+80
+1
+2
+No
