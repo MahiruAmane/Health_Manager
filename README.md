@@ -56,6 +56,14 @@ Get-Content sample_input.txt | .\health_system.exe
 
 ---
 
+## 💻 Languages & Tools
+
+*   🧠 **Language** — **C**
+*   ⚙️ **Compiler** — **GCC**
+*   ✍️ **Editor** — **Visual Studio Code**
+
+---
+
 ## 📂 Directory Structure
 
 ```
